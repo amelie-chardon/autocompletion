@@ -1,0 +1,161 @@
+
+/*GENERAL*/
+html
+{
+    margin:0;
+    padding: 0;
+    width: 100%;
+}
+
+body
+{
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    }
+
+main
+{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    flex-direction: column;
+    min-height: 80vh;
+    width: 100%;
+    flex-grow: 1;
+}
+
+h1
+{
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+}
+
+h2
+{
+    text-transform: uppercase;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+}
+
+main a:hover
+{
+    color:#0ECC80;
+}
+
+form
+{
+    text-align: center;
+    margin:0;
+}
+
+p
+{
+    font-size:1.2em;
+    font-family: 'Arial', sans-serif;
+}
+
+button, input
+{
+    margin:10px;
+    padding:15px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    box-shadow: none;
+}
+
+input
+{
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover
+{
+    background-color: #2BFF32;
+}
+
+/*HEADER*/
+
+header
+{
+    display: flex;
+    width:100%;
+    height:12vh;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00CC7E;
+}
+
+/*FOOTER*/
+
+footer
+{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #4D997C;
+    color:white;
+    height:8vh;
+}
+
+/*INDEX*/
+
+.panneau
+{
+    margin:5px;
+    display:flex;
+    flex-direction:column ;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.bloc
+{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    max-width:60vw;
+    margin:10px;
+    padding:5px;
+}
+
+label
+{
+    font-size:1.4em;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+}
+
+.formulaire
+{
+    display: flex;
+    flex-direction: column;
+}
