@@ -32,14 +32,18 @@ else
   <main>
   <section class="panneau">
     <h1>Vos résultats de recherche</h1>
-    <?php
-    foreach($result as list($id,$nom))
-      {
-      ?>
-      <p><a href="element.php?id=<?php echo $id;?>"><?php echo $nom; ?></a></p>
-      <?php
-      }
-    ?>
+      <section class="bloc">
+        <ul>
+        <?php
+        foreach($result as list($id,$nom))
+          {
+          ?>
+          <li><p><a href="element.php?id=<?php echo $id;?>"><?php echo $nom; ?></a></p></li>
+          <?php
+          }
+        ?>
+        </ul>
+      </section>
     </section>
   </main>
 <?php require "include/footer.php" ?>

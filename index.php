@@ -17,20 +17,22 @@ if(!isset($_SESSION['bdd']))
   <link rel="stylesheet" href="style.css">
   <title>Accueil</title>
 </head>
-<body>
+<body id="index">
 
   <?php require "include/header.php" ;?>
 <main>
 
   <section class="panneau">
     <h1>L'annuaire complet des oiseaux de France</h1>
-  <form class="formulaire" autocomplete="off" method="GET" action="recherche.php">
-    <label for="search">Rechercher un oiseau :</label>
-    <input type="text" name="search" id="search" list="liste" placeholder="Votre recherche" required>
-    <datalist id="liste">
-    </datalist>
-    <input type="submit" id="submit">
-  </form>
+      <section class="bloc">
+        <h2>Rechercher un oiseau :</h2>
+        <form autocomplete="off" method="GET" action="recherche.php">
+          <input type="text" name="search" id="search" list="liste" placeholder="Votre recherche" required>
+          <datalist id="liste">
+          </datalist>
+          <input type="submit" id="submit">
+        </form>
+    </section>
   </section>
 </main>
 <?php require "include/footer.php" ?>

@@ -26,7 +26,7 @@ main
     justify-items: center;
     align-content: center;
     flex-direction: column;
-    min-height: 80vh;
+    min-height: 84vh;
     width: 100%;
     flex-grow: 1;
 }
@@ -42,7 +42,9 @@ h1
 
 h2
 {
-    text-transform: uppercase;
+    font-size:1.6em;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
 }
 
 a{
@@ -50,9 +52,9 @@ a{
     text-decoration: none;
 }
 
-main a:hover
+p a:hover
 {
-    color:#0ECC80;
+    color:#90992C;
 }
 
 form
@@ -61,7 +63,7 @@ form
     margin:0;
 }
 
-p
+p,li
 {
     font-size:1.2em;
     font-family: 'Arial', sans-serif;
@@ -69,23 +71,20 @@ p
 
 button, input
 {
-    margin:10px;
-    padding:15px;
+    margin:5px;
+    padding:12px;
     border-radius: 30px;
-    font-size: 1.2em;
+    font-size: 1em;
     box-shadow: none;
-}
-
-input
-{
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
+    width: fit-content;
 }
 
-input[type="submit"]:hover
+button:hover,input[type="submit"]:hover
 {
-    background-color: #2BFF32;
+    background-color: #90992C;
 }
 
 /*HEADER*/
@@ -94,13 +93,13 @@ header
 {
     display: flex;
     width:100%;
-    height:12vh;
+    height:8vh;
     flex-direction: row;
     align-items: center;
     align-content: center;
     justify-content: space-between;
     align-items: center;
-    background-color: #00CC7E;
+    background-color: #C7CC8D;
 }
 
 /*FOOTER*/
@@ -114,23 +113,41 @@ footer
     align-content: center;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #4D997C;
-    color:white;
+    background-color: #99A67B;
+    color:black;
     height:8vh;
 }
 
+footer p
+{
+    font-size:0.8em;
+}
+
+footer a:hover
+{
+    color:white;
+}
+
 /*INDEX*/
+
+#index
+{
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+}
 
 .panneau
 {
     margin:5px;
     display:flex;
     flex-direction:column ;
-    justify-content: center;
+    justify-content: space-between;
     justify-items: center;
     align-content: center;
     align-items: center;
-    height: 60vh;
+    height: 80vh;
 }
 
 .bloc
@@ -138,13 +155,13 @@ footer
     display:flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     justify-items: center;
     align-content: center;
-    align-items: center;
-    max-width:60vw;
+    max-width:70vw;
     margin:10px;
     padding:5px;
+    height: 50vh;
 }
 
 label
@@ -152,10 +169,18 @@ label
     font-size:1.4em;
     font-weight: bold;
     font-family: 'Arial', sans-serif;
+    margin:10px;
 }
 
-.formulaire
+/*ELEMENT*/
+
+#element
 {
-    display: flex;
-    flex-direction: column;
+    align-items:left;
+}
+
+/*RECHERCHE*/
+.bloc a:visited
+{
+    color: grey;
 }

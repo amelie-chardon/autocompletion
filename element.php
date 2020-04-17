@@ -31,22 +31,24 @@ else
 <?php require "include/header.php" ?>
   <main>
   <section class="panneau">
-    <h1>Votre recherche</h1>
       <?php
       foreach($result as list($id,$nom_fr,$nom_lat,$ordre,$categorie,$couleur,$description))
         {
-        ?>
-          <article class="bloc">
-            <h2>Nom : <?php echo $nom_fr;?></h2>
+        ?>    
+        <h1>Nom : <?php echo $nom_fr;?></h1>
+          <section class="bloc" id="element">
             <p>Nom scientifique : <?php echo $nom_lat;?></p>
             <p>Ordre (famille) : <?php echo $ordre;?></p>
             <p>Catégorie : <?php echo $categorie;?></p>
             <p>Couleur principale : <?php echo $couleur;?></p>
             <p>Description : <?php echo $description;?></p>
-          </article>
+          </section>
         <?php
+        $search=$_SESSION["bdd"]->getSearch();
         }
       ?>
+      <a href="recherche.php?search=<?php echo $search; ?>"><button type="submit" name="recherche">Retour</button></a>
+    </section>
   </main>
 <?php require "include/footer.php" ?>
 

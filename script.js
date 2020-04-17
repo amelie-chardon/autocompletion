@@ -1,5 +1,8 @@
 //--INDEX--//
 $(document).ready(function(){
+  function strUcFirst(a)
+  {return (a+'').charAt(0).toUpperCase()+a.substr(1);}
+
 
     $("input").keypress(function(){
 
@@ -14,6 +17,7 @@ $(document).ready(function(){
         function(data){
           var oiseaux = JSON.parse(data);
           search=($("input").val());
+          search=strUcFirst(search);
           console.log(search);
           var propositions=[];
 
@@ -31,8 +35,6 @@ $(document).ready(function(){
           console.log(propositions);
 
           //Affichage des propositions
-
-          // retrieve the datalist element
           var liste_propositions = document.getElementById('liste');
 
           if(($("input")).innerHTML=="")
@@ -52,8 +54,8 @@ $(document).ready(function(){
             //On parcourt toutes les propositions
             propositions.forEach(function(item)
             {
-              //On limite le nombre de propositions à 10
-              if(i<=10)
+              //On limite le nombre de propositions à 5
+              if(i<=5)
               {
                 //On créé un nouvel élément <option>
                 var option = document.createElement('option');

@@ -5,6 +5,7 @@ class bdd{
     protected $connexion = "";
     private $query="";
     private $result=[];
+    private $search="";
 
 
 public function connect()
@@ -62,7 +63,9 @@ public function connect()
     public function search($str){
         $this->connect();
         $this->execute("SET NAMES UTF8");
+        $str=addslashes($str);
         $result=$this->execute("SELECT id,nom from oiseaux WHERE nom LIKE '%$str%' GROUP BY id ORDER BY id DESC");
+        $this->search=$str;
         return $result;
     }
 
@@ -72,4 +75,11 @@ public function connect()
         $result=$this->execute("SELECT * from oiseaux WHERE id=$id");
         return $result;
     }
+
+    public function getSearch()
+    {
+        return $this->search;
+    }
 }
+
+

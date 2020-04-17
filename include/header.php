@@ -4,7 +4,7 @@
     {
     ?>
     <div id="menu">
-        <button type="submit" name="accueil" value="Accueil"><a href="index.php">Accueil</a></button>
+        <a href="index.php"><button type="submit" name="accueil" value="Accueil">Accueil</button></a>
     </div>
         <div id="div_search">
             <form autocomplete="off" method="GET" action="recherche.php">
