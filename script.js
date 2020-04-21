@@ -18,7 +18,6 @@ $(document).ready(function(){
           var oiseaux = JSON.parse(data);
           search=($("input").val());
           search=strUcFirst(search);
-          console.log(search);
           var propositions=[];
 
           oiseaux.forEach(oiseau => {
@@ -28,7 +27,6 @@ $(document).ready(function(){
               propositions[key] = oiseau;
             }
           });
-          console.log(propositions);
 
           //Affichage des propositions
           var liste_propositions = document.getElementById('liste');
