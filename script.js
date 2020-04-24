@@ -1,9 +1,9 @@
-//--INDEX--//
 $(document).ready(function(){
-  function strUcFirst(a)
-  {return (a+'').charAt(0).toUpperCase()+a.substr(1);}
+  function strUcFirst(a){
+    return (a+'').charAt(0).toUpperCase()+a.substr(1);
+  }
 
-
+    //Lorsqu'une touche est pressée dans la barre de recherche
     $("input").keypress(function(){
 
       $.post(
@@ -18,21 +18,15 @@ $(document).ready(function(){
           var oiseaux = JSON.parse(data);
           search=($("input").val());
           search=strUcFirst(search);
-          console.log(search);
           var propositions=[];
 
-          //console.log(oiseaux.findIndex(element => element.includes(search)));
           oiseaux.forEach(oiseau => {
-            //console.log(oiseau);
             if(oiseau.startsWith(search)==true)
             {
               var key=oiseaux.indexOf(oiseau);
-              //console.log(oiseaux.indexOf(oiseau));
               propositions[key] = oiseau;
-              //propositions.push(oiseau);
             }
           });
-          console.log(propositions);
 
           //Affichage des propositions
           var liste_propositions = document.getElementById('liste');
